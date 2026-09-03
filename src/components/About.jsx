@@ -13,16 +13,16 @@ function renderHighlighted(text, keywords) {
 
 // 技能泡泡的自然分布坐标（top/left %、旋转°、缩放）
 const bubbleLayout = [
-  { top: 4, left: 12, rot: -5, scale: 1.18 },
-  { top: 16, left: 58, rot: 4, scale: 1.06 },
-  { top: 0, left: 72, rot: -2, scale: 0.96 },
-  { top: 42, left: 6, rot: 6, scale: 1.02 },
-  { top: 52, left: 64, rot: -7, scale: 0.92 },
-  { top: 34, left: 40, rot: 2, scale: 1.0 },
-  { top: 62, left: 26, rot: -4, scale: 1.04 },
-  { top: 70, left: 56, rot: 5, scale: 0.94 },
-  { top: 12, left: 2, rot: 7, scale: 1.0 },
-  { top: 46, left: 82, rot: -3, scale: 0.9 }
+  { top: 18, left: 26, rot: -5, scale: 1.08 },
+  { top: 30, left: 54, rot: 4, scale: 1.0 },
+  { top: 12, left: 62, rot: -2, scale: 0.94 },
+  { top: 46, left: 24, rot: 6, scale: 0.98 },
+  { top: 56, left: 54, rot: -7, scale: 0.9 },
+  { top: 38, left: 42, rot: 2, scale: 1.0 },
+  { top: 68, left: 32, rot: -4, scale: 1.0 },
+  { top: 78, left: 54, rot: 5, scale: 0.92 },
+  { top: 24, left: 8, rot: 7, scale: 0.95 },
+  { top: 50, left: 72, rot: -3, scale: 0.9 }
 ]
 
 export default function About() {

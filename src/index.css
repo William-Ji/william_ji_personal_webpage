@@ -280,21 +280,22 @@ img { display: block; max-width: 100%; }
 /* 技能泡泡：像云一样自然堆叠 */
 .skill-bubbles {
   position: relative;
-  width: 100%;
-  height: 360px;
-  margin-top: 8px;
+  width: 300px;
+  max-width: 100%;
+  height: 260px;
+  margin: 6px auto 0;
 }
 .skill-bubble {
   position: absolute;
-  padding: 8px 14px;
+  padding: 6px 12px;
   border-radius: 999px;
   background: var(--grad-soft);
   color: var(--violet);
   font-weight: 600;
-  font-size: 13.5px;
+  font-size: 13px;
   border: 1px solid rgba(124, 58, 237, 0.18);
   white-space: nowrap;
-  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.08);
+  box-shadow: 0 3px 10px rgba(124, 58, 237, 0.07);
   transform-origin: center;
   transition: transform 0.3s, background 0.25s, color 0.25s;
   cursor: default;
@@ -380,6 +381,7 @@ img { display: block; max-width: 100%; }
 .video-card__body p { color: var(--ink-soft); font-size: 14px; }
 
 /* ---------------- 画廊 ---------------- */
+.gallery__note { font-size: 20px; color: var(--ink-soft); font-weight: 400; }
 .gallery__filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px; }
 .filter-btn {
   padding: 8px 18px;
@@ -620,7 +622,7 @@ img { display: block; max-width: 100%; }
   .nav__indicator { display: none; }
   .videos, .gallery, .projects { grid-template-columns: 1fr; }
   .section { padding: 68px 20px; }
-  .skill-bubbles { height: 320px; }
+  .skill-bubbles { height: 240px; }
 }
 
 /* ---------------- 打印（导出简历 PDF） ---------------- */

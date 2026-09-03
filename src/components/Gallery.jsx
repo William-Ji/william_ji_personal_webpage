@@ -19,7 +19,7 @@ export default function Gallery() {
     <section className="section section--alt" id="gallery">
       <div className="container">
         <h2 className="section__title">照片画廊 <span className="section__title-en">Gallery</span></h2>
-        <p className="section__sub">目前还是糖水片 :)</p>
+        <p className="section__sub gallery__note">目前还是糖水片 :)</p>
         <div className="gallery__filters">
           {cats.map((c) => (
             <button
@@ -35,7 +35,6 @@ export default function Gallery() {
           {list.map((ph) => (
             <div className="gallery__item" key={ph.src} onClick={() => setLightbox(ph)}>
               <img src={ph.src} alt={ph.title} loading="lazy" />
-              <div className="gallery__overlay"><span>{ph.title}</span></div>
             </div>
           ))}
         </div>
@@ -45,7 +44,6 @@ export default function Gallery() {
         <div className="lightbox open" onClick={() => setLightbox(null)}>
           <button className="lightbox__close" onClick={() => setLightbox(null)} aria-label="关闭">✕</button>
           <img className="lightbox__img" src={lightbox.src} alt={lightbox.title} />
-          <p className="lightbox__caption">{lightbox.title}</p>
         </div>
       )}
     </section>
