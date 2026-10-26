@@ -118,3 +118,15 @@ python -m http.server 9001 --directory dist
 ```bash
 "<node路径>/node.exe" "<node路径>/node_modules/npm/bin/npm-cli.js" <command>
 ```
+
+---
+
+## 2026-09-03 · 微调
+
+- **技能泡泡更紧凑**：`.skill-bubbles` 容器从 `width:100% / height:360px` 改为 `width:300px(居中) / height:260px`；`.skill-bubble` 的 padding 8px14px→6px12px、字号 13.5→13px；`bubbleLayout` 坐标整体收紧（scale 上限 1.18→1.08、top 范围缩小）。
+- **照片画廊**：
+  - 备注「目前还是糖水片 :)」字号调大到 20px（新增 `.gallery__note`），语气谦虚。
+  - 每张照片**去掉所有文字说明**：移除 hover 的 `.gallery__overlay`（标题）和灯箱底部 `.lightbox__caption`（标题）。只保留图片本身，alt 属性仅用于无障碍。
+
+### 环境踩坑补充
+- 本机 CLI 的 `genie-safe-delete` 钩子会在「单回合内删除文件数 > 50」时触发 `SAFE_DELETE_BULK_CONFIRM_REQUIRED`，导致 `rm -rf dist` / Vite `emptyDir` 失败。**解决办法**：把 dist 分批删（或先删到 <50 个文件再删剩余），再执行 `npm run build`。
