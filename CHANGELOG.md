@@ -152,3 +152,12 @@ python -m http.server 9001 --directory dist
   - `DSCF7752.jpg` 海岸礁石 · 渔船（531KB）
   - `DSCF7263.jpg` 巷口白猫（167KB）
 - 画廊现有 18 张。
+
+---
+
+## 2026-10-27（晚） · 项目模块二改
+
+- 用户反馈左卡（Big Picture 纯链接卡）太空。**换为 `https://team-cbwfm.netlify.app/analysis/` 内嵌**（含 Introduction / EDA / Modeling 文字与图表，42KB 无嵌入限制）。
+- 项目模块现为**双 iframe 对称两栏**：左 Analysis、右 Interactive，均带「新窗口打开 ↗」兜底；CSS 列宽改为 `1fr 1fr`。
+- 组件重构：Projects.jsx 抽出 `EmbedCard` 复用子组件；data.js 的 `bigPicture` 键替换为 `analysis`。
+- 按用户要求**未 push**（本地 commit 2813108）。
