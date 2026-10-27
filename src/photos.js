@@ -16,9 +16,10 @@ export const photos = [
   { title: "小荷才露", category: "荷花风景", src: "photos/DSCF6526.jpg" },
   { title: "破晓天空", category: "生活随拍", src: "photos/DSCF1040.jpg" },
   { title: "古典立面", category: "生活随拍", src: "photos/DSCF1134.jpg" },
-  { title: "古塔与花", category: "生活随拍", src: "photos/DSCF2985.jpg" },
   { title: "夏日街角", category: "生活随拍", src: "photos/DSCF3008.jpg" },
   { title: "城市森林 · 北京 CBD", category: "生活随拍", src: "photos/DSCF3065.jpg" },
   { title: "粉色木槿", category: "生活随拍", src: "photos/DSCF5892.jpg" },
-  { title: "双鸭戏水", category: "生活随拍", src: "photos/DSCF6592.jpg" }
+  { title: "双鸭戏水", category: "生活随拍", src: "photos/DSCF6592.jpg" },
+  { title: "海岸礁石 · 渔船", category: "生活随拍", src: "photos/DSCF7752.jpg" },
+  { title: "巷口白猫", category: "生活随拍", src: "photos/DSCF7263.jpg" }
 ]

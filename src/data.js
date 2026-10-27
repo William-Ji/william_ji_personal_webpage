@@ -117,41 +117,21 @@ export const site = {
   photoCategories: ["全部", "手表微距", "荷花风景", "生活随拍"],
   photos,
 
-  /* ---------------- 项目（GitHub 大学小组作业） ---------------- */
-  github: {
-    username: "William-Ji",
-    autoFetch: false
-  },
-  projects: [
-    {
-      title: "DS110FinalProj · BU 数据科学课程期末项目",
-      desc: "波士顿大学 DS110 数据科学课程期末小组作业（2022.04），使用 Jupyter Notebook 完成数据清洗、建模与可视化全流程。",
-      tags: ["Python", "Jupyter Notebook", "Data Science", "小组作业"],
-      link: "https://github.com/William-Ji/DS110FinalProj"
+  /* ---------------- 项目（团队数据分析项目站点） ---------------- */
+  projectSite: {
+    name: "The US Shooting Case Analysis · CBWFM Team",
+    desc: "团队数据分析项目：基于 2015–2019 年美国警察枪击公开数据，从受害者特征、环境因素到持枪预测模型的多维分析。",
+    bigPicture: {
+      title: "Big Picture · 宏观分析",
+      url: "https://team-cbwfm.netlify.app/big_picture/",
+      desc: "受害者画像、地域分布与持枪预测模型的整体结论，一页看懂分析全貌。"
     },
-    {
-      title: "【待补充】BU 课程小组作业 1",
-      desc: "本科阶段（BU）的小组作业占位，请在 GitHub 上传后在此补充项目名、职责与描述。",
-      tags: ["待补充", "小组作业"],
-      link: "https://github.com/William-Ji"
-    },
-    {
-      title: "【待补充】BU 课程小组作业 2",
-      desc: "本科阶段（BU）的小组作业占位，请在 GitHub 上传后在此补充项目名、职责与描述。",
-      tags: ["待补充", "小组作业"],
-      link: "https://github.com/William-Ji"
+    interactive: {
+      title: "Interactive · 交互图表",
+      url: "https://team-cbwfm.netlify.app/interactive/",
+      desc: "可交互的探索式图表，右侧可直接操作；也可在新窗口打开。",
+      embed: true
     }
-  ],
-
-  /* ---------------- 硕士项目（USC，尚未上传 GitHub） ---------------- */
-  masterProjects: {
-    ready: false,
-    note: "USC 硕士期间的应用计量经济与经济咨询项目正在整理中，将陆续在此展示。",
-    items: [
-      { title: "硕士项目 · 应用计量经济", status: "敬请期待" },
-      { title: "硕士项目 · 经济咨询", status: "敬请期待" },
-      { title: "硕士项目 · 数据分析", status: "敬请期待" }
-    ]
   },
 
   /* ---------------- 简历（双语，不展示技能条） ---------------- */
