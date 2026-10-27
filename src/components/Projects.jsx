@@ -3,6 +3,24 @@ import Reveal from './Reveal'
 
 const ps = site.projectSite
 
+function EmbedCard({ data, tag }) {
+  return (
+    <Reveal className="project-feature">
+      <div className="project-feature__head">
+        <span className="project-feature__tag">{tag}</span>
+        <h3>{data.title}</h3>
+        <a href={data.url} target="_blank" rel="noopener noreferrer">
+          新窗口打开 ↗
+        </a>
+      </div>
+      <div className="project-frame">
+        <span className="project-frame__loading">加载中…</span>
+        <iframe src={data.url} title={data.title} loading="lazy" />
+      </div>
+    </Reveal>
+  )
+}
+
 export default function Projects() {
   return (
     <section className="section" id="projects">
@@ -13,38 +31,8 @@ export default function Projects() {
         </p>
 
         <div className="project-links">
-          {/* Big Picture：链接卡片 */}
-          <Reveal className="project-feature">
-            <div className="project-feature__body">
-              <span className="project-feature__tag">📊 链接</span>
-              <h3>{ps.bigPicture.title}</h3>
-              <p>{ps.bigPicture.desc}</p>
-              <a className="btn btn--primary" href={ps.bigPicture.url} target="_blank" rel="noopener noreferrer">
-                打开 Big Picture ↗
-              </a>
-            </div>
-          </Reveal>
-
-          {/* Interactive：内嵌展示（可关闭嵌入，改为纯链接） */}
-          {ps.interactive.embed && (
-            <Reveal className="project-feature">
-              <div className="project-feature__head">
-                <span className="project-feature__tag">🕹 内嵌</span>
-                <h3>{ps.interactive.title}</h3>
-                <a href={ps.interactive.url} target="_blank" rel="noopener noreferrer">
-                  新窗口打开 ↗
-                </a>
-              </div>
-              <div className="project-frame">
-                <span className="project-frame__loading">加载中…（数据较多时可能稍慢）</span>
-                <iframe
-                  src={ps.interactive.url}
-                  title={ps.interactive.title}
-                  loading="lazy"
-                />
-              </div>
-            </Reveal>
-          )}
+          <EmbedCard data={ps.analysis} tag="📝 内嵌" />
+          <EmbedCard data={ps.interactive} tag="🕹 内嵌" />
         </div>
       </div>
     </section>

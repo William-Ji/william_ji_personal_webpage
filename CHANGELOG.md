@@ -130,3 +130,25 @@ python -m http.server 9001 --directory dist
 
 ### 环境踩坑补充
 - 本机 CLI 的 `genie-safe-delete` 钩子会在「单回合内删除文件数 > 50」时触发 `SAFE_DELETE_BULK_CONFIRM_REQUIRED`，导致 `rm -rf dist` / Vite `emptyDir` 失败。**解决办法**：把 dist 分批删（或先删到 <50 个文件再删剩余），再执行 `npm run build`。
+
+---
+
+## 2026-10-27 · 项目模块重构 + 画廊更新
+
+### 项目模块：改为团队项目站点
+- 移除旧的 GitHub 项目卡片（DS110FinalProj + 占位卡）和「硕士项目敬请期待」预留区。
+- 换成团队项目 **The US Shooting Case Analysis（CBWFM Team）**（2015–2019 美国警察枪击公开数据分析）：
+  - **Big Picture**（`https://team-cbwfm.netlify.app/big_picture/`）：链接卡片展示（标题 + 简介 + 打开按钮）。
+  - **Interactive**（`https://team-cbwfm.netlify.app/interactive/`）：**iframe 内嵌**，与 Big Picture 并列两栏展示。
+    - 嵌入可行性已验证：目标站无 `X-Frame-Options` / CSP frame-ancestors 限制；页面 ~1.6MB（主要为 CDN 字体/JS），无重型数据，可接受。
+    - `loading="lazy"` + 底层「加载中…」占位 + 右上角「新窗口打开 ↗」兜底链接。
+    - 如以后要放弃内嵌：把 `src/data.js` 里 `projectSite.interactive.embed` 改为 `false` 即自动退化为纯链接卡片。
+- 数据结构：`data.js` 中 `github` / `projects` / `masterProjects` 三段合并替换为 `projectSite` 单一配置。
+- CSS：删除旧 `.project-card` / `.projects--coming` / `.badge`，新增 `.project-links`（两栏 grid）、`.project-feature`、`.project-frame`（iframe 容器 + 加载占位）。
+
+### 照片画廊
+- 删除「古塔与花」（DSCF2985.jpg）。
+- 新增两张（源文件 `H:\富士XS20相片\2610\`，压缩至 1600px / JPEG 80）：
+  - `DSCF7752.jpg` 海岸礁石 · 渔船（531KB）
+  - `DSCF7263.jpg` 巷口白猫（167KB）
+- 画廊现有 18 张。

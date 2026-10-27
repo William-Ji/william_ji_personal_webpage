@@ -121,15 +121,16 @@ export const site = {
   projectSite: {
     name: "The US Shooting Case Analysis · CBWFM Team",
     desc: "团队数据分析项目：基于 2015–2019 年美国警察枪击公开数据，从受害者特征、环境因素到持枪预测模型的多维分析。",
-    bigPicture: {
-      title: "Big Picture · 宏观分析",
-      url: "https://team-cbwfm.netlify.app/big_picture/",
-      desc: "受害者画像、地域分布与持枪预测模型的整体结论，一页看懂分析全貌。"
+    analysis: {
+      title: "Analysis · 分析与图表",
+      url: "https://team-cbwfm.netlify.app/analysis/",
+      desc: "分析全文：Introduction / EDA / Modeling，文字讲解配图表。",
+      embed: true
     },
     interactive: {
       title: "Interactive · 交互图表",
       url: "https://team-cbwfm.netlify.app/interactive/",
-      desc: "可交互的探索式图表，右侧可直接操作；也可在新窗口打开。",
+      desc: "可交互的探索式图表，可直接操作；也可在新窗口打开。",
       embed: true
     }
   },

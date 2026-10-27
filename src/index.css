@@ -434,7 +434,7 @@ img { display: block; max-width: 100%; }
 /* ---------------- 项目 ---------------- */
 .project-links {
   display: grid;
-  grid-template-columns: 1fr 1.25fr;
+  grid-template-columns: 1fr 1fr;
   gap: 26px;
   align-items: stretch;
 }
